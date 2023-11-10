@@ -1,4 +1,4 @@
-package petasalPost
+package petbackPost
 
 import (
     "fmt"
@@ -12,7 +12,7 @@ func init() {
     functions.HTTP("petbackPost", petbackPost)
 }
 
-func petasalPost(w http.ResponseWriter, r *http.Request) {
+func petbackPost(w http.ResponseWriter, r *http.Request) {
     // Set CORS headers for the preflight request
     if r.Method == http.MethodOptions {
         w.Header().Set("Access-Control-Allow-Origin", "https://muhammad-faisal-ashshidiq.github.io")
@@ -24,6 +24,6 @@ func petasalPost(w http.ResponseWriter, r *http.Request) {
     }
     // Set CORS headers for the main request.
     w.Header().Set("Access-Control-Allow-Origin", "https://muhammad-faisal-ashshidiq.github.io")
-    fmt.Fprintf(w, petback.GCFPostCoordinate("MONGOJAMBE", "petasal", "petbackPost", r))
+    fmt.Fprintf(w, petback.GCFPostHandler("PASETOPRIVATEKEYENV" ,"MONGOSTRING", "petback", "tesgis", r))
 
 }
